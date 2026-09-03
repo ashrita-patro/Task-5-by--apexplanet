@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase - responsive capstone e-commerce website">
+  <title>ShopEase | E-Commerce Capstone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#">Shop<span>Ease</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <nav id="navLinks">
+        <a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="cart-btn" id="cartBtn">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div class="search-box container" id="searchBox">
+      <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">NEW COLLECTION 2026</p>
+          <h1>Style that fits <span>your life.</span></h1>
+          <p class="hero-text">Discover quality fashion, accessories and everyday essentials at prices you'll love.</p>
+          <a class="primary-btn" href="#products">Shop Now →</a>
+          <div class="stats"><div><b>10K+</b><small>Happy Customers</small></div><div><b>500+</b><small>Products</small></div><div><b>4.8★</b><small>Average Rating</small></div></div>
+        </div>
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Modern clothing store" fetchpriority="high">
+          <div class="offer">UP TO <strong>40% OFF</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">OUR PRODUCTS</p><h2>Popular picks</h2></div>
+          <div class="filters" id="filters">
+            <button class="filter active" data-category="all">All</button>
+            <button class="filter" data-category="fashion">Fashion</button>
+            <button class="filter" data-category="shoes">Shoes</button>
+            <button class="filter" data-category="accessories">Accessories</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty" id="emptyState">No products found.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container feature-grid">
+        <article><span>🚚</span><h3>Free Delivery</h3><p>On orders above ₹999</p></article>
+        <article><span>🔒</span><h3>Secure Payment</h3><p>100% secure checkout</p></article>
+        <article><span>↩️</span><h3>Easy Returns</h3><p>7-day return policy</p></article>
+        <article><span>💬</span><h3>24/7 Support</h3><p>We're here to help</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=75" alt="Clothing racks in a store">
+        <div><p class="eyebrow">WHY SH0PEASE?</p><h2>Simple shopping. Better experience.</h2><p>ShopEase is a front-end capstone project built with semantic HTML, modern CSS and vanilla JavaScript. It demonstrates responsive design, dynamic product rendering, search, filters and a persistent shopping cart.</p><a class="secondary-btn" href="#contact">Learn More</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div><a class="logo" href="#">Shop<span>Ease</span></a><p>Modern shopping for everyday life.</p></div>
+      <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a></div>
+      <div><h4>Contact</h4><p>support@shopease.demo</p><p>+91 98765 43210</p></div>
+    </div>
+    <div class="copyright">© 2026 ShopEase. Built for ApexPlanet Task 5.</div>
+  </footer>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+    <div class="cart-head"><h2>Your Cart</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom"><div><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="primary-btn checkout" id="checkout">Checkout</button></div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
